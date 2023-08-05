@@ -13,7 +13,7 @@ from pages.main_page import Main_page
 from pages.payment_page import Payment_page
 
 
-def test_buy_product():
+def test_linnc_abaut():
     os.environ['PATH'] += ';E:\\Project\\Project_Seucedemo_Selenium\\Driver'
     driver = webdriver.Chrome()
 
@@ -23,19 +23,9 @@ def test_buy_product():
     login.authorization()
 
     main_page = Main_page(driver)
-    main_page.select_product()
+    main_page.select_menu_about()
 
-    cart_page = Cart_page(driver)
-    cart_page.click_checkout()
 
-    chp = Checkout_page(driver)
-    chp.checkout_continue()
-
-    pg = Payment_page(driver)
-    pg.click_finish()
-
-    fp = Finish_page(driver)
-    fp.finish()
 
     time.sleep(5)
 
